@@ -28,7 +28,7 @@ npm run dev
 ### בתיקיית client של הפרויקט
 ```bash
 cd client
-npm start
+npm run start:3001
 ```
 
 ### 🧪 טסטים ל־Backend
