@@ -1,38 +1,97 @@
-.App {
+.queue-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  direction: rtl;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.filters input,
+.filters select,
+.filters button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.queue-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.queue-table th,
+.queue-table td {
+  border-bottom: 1px solid #eee;
+  padding: 12px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.queue-table th {
+  background-color: #f6f6f6;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.action-btn {
+  margin: 0 5px;
+  padding: 6px 12px;
+  background-color: #888;
   color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.App-link {
-  color: #61dafb;
+.action-btn:hover {
+  background-color: #555;
+}
+.api-actions {
+  margin-bottom: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.api-action-block {
+  background: #f9f9f9;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.api-action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.api-result {
+  background: #eee;
+  padding: 10px;
+  margin-top: 10px;
+  white-space: pre-wrap;
+  direction: ltr;
+}
+
+.btn, select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 14px;
+  margin: 5px;
 }
