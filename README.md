@@ -17,3 +17,6 @@ npm install --save-dev nodemon jest supertest
 npx create-react-app client
 cd client
 npm install
+
+
+![תצוגת המערכת](images/leomi-test.png)
