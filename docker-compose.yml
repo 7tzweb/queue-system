@@ -1,0 +1,41 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:5.0
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  server:
+    image: node:18
+    container_name: queue-server
+    working_dir: /app
+    volumes:
+      - ./queue-system:/app
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/queue-db
+    command: sh -c "npm install && npm run dev"
+    depends_on:
+      - mongo
+
+  client:
+    image: node:18
+    container_name: queue-client
+    working_dir: /app
+    volumes:
+      - ./client:/app
+    ports:
+      - "3001:3001"
+    command: sh -c "npm install && npm start"
+    stdin_open: true
+    tty: true
+    depends_on:
+      - server
+
+volumes:
+  mongo-data:
