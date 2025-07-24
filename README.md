@@ -10,7 +10,7 @@ cd queue-system
 npm init -y
 npm install express mongoose dotenv morgan
 npm install --save-dev nodemon jest supertest
-
+```
 
 ## 📦 התקנות ל־Frontend
 
